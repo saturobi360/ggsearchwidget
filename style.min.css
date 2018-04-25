@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+.centered-text,
+.form{
+  text-align: center
+}
+
+.powered-by,
+.powered-by span {
+  display: inline-block
+}
+
+body {
+  border: 1px solid #ccc;
+  font-family: "Open Sans",sans-serif;
+  margin: 0;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+select {
+  background: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  height: 49px;
+  margin: 4px 0
+}
+
+.ad-container {
+  height: 250px; /*check on 600px ad height */
+  width: 300px;
+}
+
+.full-width {
+  min-width: 280px
+}
+
+.header{
+  background: #EFEFEF;
+  margin-bottom: 10px;
+  text-align: center;
+  background: #333333;
+  padding: 5px;
+
+}
+
+.header h2 {
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  color:  #ffffff;
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.or {
+  color: #666;
+  margin: 15px 0 0 10px;
+  text-align: left
+}
+
+.powered-by{
+  text-align: center; 
+  font-weight: bold;
+}
+
+.powered-by span {
+  color: #999;
+  font-size: 11px; 
+  color:  #ccc;
+}
+
+.powered-by span > a{
+color: #f48b41;
+text-decoration: none;
+font-weight: bold;
+}
+
+
+.research-button {
+  border: 1px solid #ccc;
+  color: #ccc;
+  height: 49px;
+  padding: 10px 0;
+  width: 280px;
+    cursor: pointer;
+    font-family: Oswald, sans-serif;
+    font-size: 1em;
+    margin:  5px 0;
+  }
+
+
+  .research-button:hover {
+    cursor: pointer;
+   color:  black;
+    }
+
+
+.research-button-disabled,
+.selectdiv-empty select {
+  border: 1px solid #CCC;
+  color: #CCC;
+}
+
+.research-button-active:hover {
+  background: #f48b41
+}
+
+.research-button-active {
+  background-color: #f38131;
+  color: #fff;
+}
+
+.research-button-disabled {
+  background: #FFF
+}
+
+.widget {
+  padding: 0 0 15px;
+  width: 300px
+}
+
+.selectdiv {
+  position: relative;
+  text-align: center
+}
+
+.selectdiv-empty:after,
+.selectdiv-filled:after,
+.selectdiv:after {
+  font-size: 32px;
+  right: 23px;
+  height: 34px;
+  padding: 15px 0 0 8px;
+  position: absolute;
+  font-family: "Material Icons";
+  content: "expand_more";
+  top: 0;
+  pointer-events: none
+}
+
+.selectdiv-empty {
+  color: #CCC;
+}
+
+.selectdiv-filled {
+  color: #666
+}
+
+
+.selectdiv-filled select {
+  border: 1px solid #666;
+  color: #666
+}
+
+.selectdiv select{
+  margin: 5px 0;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  background-color: #fff;
+  background-image: none
+}
+
+select::-ms-expand {
+  display: none
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.selectdiv select {
+  -ms-word-break: normal;
+  word-break: normal
+}
+
+.empty-select {
+  border: 1px solid #CCC;
+  color: #CCC
+}
+.custom-select.full-width {
+  width: 100px;
+}
+
+#firearminterest-container select {
+  width: 95%;
+}
