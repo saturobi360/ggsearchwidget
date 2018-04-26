@@ -77,7 +77,7 @@ $a1 = explode(',',$file);
 
   <body>
 
-    <form action="https://www.gungenius.com/search?" target="_blank" onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}">
+    <form action="https://www.gungenius.com/search?" target="_blank">
       <div class="widget">
         <div class="header">
           <h2>CHOOSE A FIREARM</h2>
@@ -159,7 +159,6 @@ foreach($a1 as $a2) {
     <div id="div-gpt-ad-1524583107949-0" class="ad-container"></div>
     
     <script>
-	// this code can be moved externally to improve performance
         googletag.cmd.push(function() {
             // define slot1
             slot1 = googletag.defineSlot(
@@ -170,7 +169,7 @@ foreach($a1 as $a2) {
                 .addService(googletag.pubads())
                 .setTargeting(
                     "interests",
-                    ["firearm", "gun"]
+                    ["firearm", "gun"] //Katey or someone needs to define what ad targeting keywords they want to use
                 );
             // prerender the slot but don't display it because of disableInitialLoad()
             googletag.display("div-gpt-ad-1524583107949-0");            
