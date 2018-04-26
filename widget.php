@@ -33,6 +33,7 @@ $a1 = explode(',',$file);
           window.location = url;
         }
       }
+
     </script>
     
     <!--- This initializes Google tag  --->
@@ -79,9 +80,9 @@ $a1 = explode(',',$file);
     <form action="https://www.gungenius.com/search?" target="_blank" onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}">
       <div class="widget">
         <div class="header">
-          <h2 class="oswald-font">CHOOSE A FIREARM</h2>
+          <h2>CHOOSE A FIREARM</h2>
           <div class="powered-by">
-            <span>Powered by </span><span style="color:orange;font-weight:bold"><a href="http://gungenius.com" target="_blank">&nbsp; GunGenius.com</a></span>
+            <span>Powered by</span> <span><a href="http://gungenius.com">GunGenius.com</a></span>
           </div>
         </div>
         <div id="manufacturer-container" class="selectdiv selectdiv-empty">
@@ -89,7 +90,6 @@ $a1 = explode(',',$file);
                 <select id="manufacturer-dropdown" name="manufacturer" style="color:#000; border: 1px solid #000"; class="custom-select full-width">
 					<option value="" style="color:#000";>Manufacturer</option>
 <?php
-
 foreach($a1 as $a2) { 
 	if($a2 == 'Unknown'){
 	}
@@ -104,10 +104,9 @@ foreach($a1 as $a2) {
                 </select>
             </label>
         </div>
-        
         <script>
           $(document).on("change", "#manufacturer-dropdown", function() {
-            $(".centered-text").html("<button class='research-button' style='background-color:orange; border:none; color:#fff; cursor: pointer;' id='research-button'>RESEARCH</button>");
+            $(".centered-text").html("<button class='research-button' style='background-color:#f38131; border:none; color:#fff; cursor: pointer;' id='research-button'>RESEARCH</button>");
             var siteId = this.value;
             //alert(siteId);
             $.ajax({
@@ -123,8 +122,8 @@ foreach($a1 as $a2) {
               }
             });
           });
+
         </script>
-        
         <div id="calibergauge-container" class="selectdiv selectdiv-empty">
           <label>
                 <select id="calibergauge-dropdown" disabled="disabled" name="caliber" class="custom-select full-width">
@@ -189,6 +188,6 @@ foreach($a1 as $a2) {
             googletag.pubads().refresh([slot1]);
         });
 	</script>   
-       
+    
   </body>
   </html>
