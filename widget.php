@@ -33,7 +33,44 @@ $a1 = explode(',',$file);
           window.location = url;
         }
       }
+    </script>
+    
+    <!--- This initializes Google tag  --->
+    <script type="text/javascript">
+        // set global variable if not already set
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        // load asynchronously the GPT JavaScript library used by DFP,
+        // using SSL/HTTPS if necessary
+        (function() {
+            var gads   = document.createElement('script');
+            gads.async = true;
+            gads.type  = 'text/javascript';
+            var useSSL = 'https:' === document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node =document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
 
+    <script type="text/javascript">
+        // can be moved as well in the body
+        // if using async mode, wrap all the javascript into googletag.cmd.push!
+        googletag.cmd.push(function() {
+            // set page-level attributes for ad slots that serve AdSense
+            googletag.pubads().set("adsense_background_color", "FFFFFF");
+            googletag.pubads().setTargeting("topic","firearm");
+            // enables Single Request Architecture (SRA)
+            googletag.pubads().enableSingleRequest();
+            // Disable initial load, we will use refresh() to fetch ads.
+            // Calling this function means that display() calls just
+            // register the slot as ready, but do not fetch ads for it.
+            googletag.pubads().disableInitialLoad();
+            // Collapses empty div elements on a page when there is no ad content to display.
+            googletag.pubads().collapseEmptyDivs();
+            // Enables all GPT services that have been defined for ad slots on the page.
+            googletag.enableServices();
+        });
     </script>
   </head>
 
@@ -67,6 +104,7 @@ foreach($a1 as $a2) {
                 </select>
             </label>
         </div>
+        
         <script>
           $(document).on("change", "#manufacturer-dropdown", function() {
             $(".centered-text").html("<button class='research-button' style='background-color:orange; border:none; color:#fff; cursor: pointer;' id='research-button'>RESEARCH</button>");
@@ -85,8 +123,8 @@ foreach($a1 as $a2) {
               }
             });
           });
-
         </script>
+        
         <div id="calibergauge-container" class="selectdiv selectdiv-empty">
           <label>
                 <select id="calibergauge-dropdown" disabled="disabled" name="caliber" class="custom-select full-width">
@@ -118,31 +156,39 @@ foreach($a1 as $a2) {
                 </select>
             </label>
     </div>
-    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    
+    <div id="div-gpt-ad-1524583107949-0" class="ad-container"></div>
+    
     <script>
-      var googletag = googletag || {};
-      googletag.cmd = googletag.cmd || [];
-
-    </script>
-
-    <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/90033693/gunbroker/search_widget', [300, 250], 'div-gpt-ad-1524583107949-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-
-    </script>
-
-    <!-- /90033693/gunbroker/search_widget -->
-    <div id='div-gpt-ad-1524583107949-0'>
-      <script>
+	// this code can be moved externally to improve performance
         googletag.cmd.push(function() {
-          googletag.display('div-gpt-ad-1524583107949-0');
+            // define slot1
+            slot1 = googletag.defineSlot(
+                    "/90033693/gunbroker/search_widget",
+                    [[300, 600], [300, 250]],
+                    "div-gpt-ad-1524583107949-0"
+                )
+                .addService(googletag.pubads())
+                .setTargeting(
+                    "interests",
+                    ["firearm", "gun"]
+                );
+            // prerender the slot but don't display it because of disableInitialLoad()
+            googletag.display("div-gpt-ad-1524583107949-0");            
+            
+            // add event to sign the slot as redered or not
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                if (event.slot === slot1) {
+                    // do something related to the slot
+                }
+            });
+            
+            // refresh all container ads and show them
+            // very important to call refresh with an array to avoid 
+            // multiple callback to the registered event 
+            googletag.pubads().refresh([slot1]);
         });
-
-      </script>
-    </div>
+	</script>   
+       
   </body>
-
   </html>
