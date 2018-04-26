@@ -60,7 +60,7 @@ $a1 = explode(',',$file);
         googletag.cmd.push(function() {
             // set page-level attributes for ad slots that serve AdSense
             googletag.pubads().set("adsense_background_color", "FFFFFF");
-            googletag.pubads().setTargeting("topic","firearm");
+            //googletag.pubads().setTargeting("topic","firearm");
             // enables Single Request Architecture (SRA)
             googletag.pubads().enableSingleRequest();
             // Disable initial load, we will use refresh() to fetch ads.
@@ -167,10 +167,10 @@ foreach($a1 as $a2) {
                     "div-gpt-ad-1524583107949-0"
                 )
                 .addService(googletag.pubads())
-                .setTargeting(
-                    "interests",
-                    ["firearm", "gun"] //Katey or someone needs to define what ad targeting keywords they want to use
-                );
+                //.setTargeting(
+                //    "interests",
+                //    ["firearm", "gun"] //Medialodge needs to define what ad targeting keywords they want to use
+                //);
             // prerender the slot but don't display it because of disableInitialLoad()
             googletag.display("div-gpt-ad-1524583107949-0");            
             
