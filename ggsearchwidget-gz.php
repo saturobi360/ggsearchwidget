@@ -82,7 +82,7 @@ $a1 = explode(',',$file);
         <div class="header">
           <h2>CHOOSE A FIREARM</h2>
           <div class="powered-by">
-            <span>Powered by</span> <span><a href="http://gungenius.com">GunGenius.com</a></span>
+            <span><a href="http://gungenius.com" target="_blank" >GunGenius.com</a></span>
           </div>
         </div>
         <div id="manufacturer-container" class="selectdiv selectdiv-empty">
@@ -136,7 +136,7 @@ foreach($a1 as $a2) {
                 RESEARCH
             </button>
         </div>
-        <div class="or oswald-font">
+        <div class="or">
           OR
         </div>
       </div>

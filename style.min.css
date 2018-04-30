@@ -25,8 +25,8 @@ select {
   background: #FFF;
   font-size: 14px;
   font-weight: 400;
-  height: 49px;
-  margin: 4px 0
+  margin: 4px 0;
+  height: 45px;
 }
 
 .ad-container {
@@ -40,11 +40,11 @@ select {
 
 .header{
   background: #EFEFEF;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: center;
   background: #333333;
   padding: 5px;
-
+  background:url(genius-icon.svg) #000 no-repeat 8px; background-size: 40px;
 }
 
 .header h2 {
@@ -56,17 +56,19 @@ select {
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
+  margin-left: 30px;
 }
 
 .or {
-  color: #666;
-  margin: 15px 0 0 10px;
-  text-align: left
+  color: #667;
+  margin: 0 0 0 10px;
+  text-align: center;
 }
 
 .powered-by{
   text-align: center; 
   font-weight: bold;
+  margin-left: 30px;
 }
 
 .powered-by span {
@@ -81,11 +83,10 @@ text-decoration: none;
 font-weight: bold;
 }
 
-
 .research-button {
   border: 1px solid #ccc;
   color: #ccc;
-  height: 49px;
+  height: 45px;
   padding: 10px 0;
   width: 280px;
     cursor: pointer;
@@ -94,12 +95,10 @@ font-weight: bold;
     margin:  5px 0;
   }
 
-
   .research-button:hover {
     cursor: pointer;
    color:  black;
     }
-
 
 .research-button-disabled,
 .selectdiv-empty select {
@@ -121,7 +120,7 @@ font-weight: bold;
 }
 
 .widget {
-  padding: 0 0 15px;
+  padding: 0;
   width: 300px
 }
 
@@ -136,26 +135,32 @@ font-weight: bold;
   font-size: 32px;
   right: 23px;
   height: 34px;
-  padding: 15px 0 0 8px;
+  padding: 12px 0 0 8px;
   position: absolute;
   font-family: "Material Icons";
   content: "expand_more";
   top: 0;
-  pointer-events: none
+  pointer-events: none;
 }
 
+.selectdiv:after {
+  color: #667;
+}
 .selectdiv-empty {
   color: #CCC;
 }
 
-.selectdiv-filled {
-  color: #666
+.selectdiv-empty:after{
+  color: #CCC;
 }
 
+.selectdiv-filled {
+  color: #667;
+}
 
 .selectdiv-filled select {
-  border: 1px solid #666;
-  color: #666
+  border: 1px solid #667;
+  color: #667;
 }
 
 .selectdiv select{
@@ -164,7 +169,7 @@ font-weight: bold;
   font-size: 16px;
   line-height: 1.75;
   background-color: #fff;
-  background-image: none
+  background-image: none;
 }
 
 select::-ms-expand {
@@ -190,6 +195,20 @@ select::-ms-expand {
   width: 100px;
 }
 
+#firearminterest-container {
+  margin-bottom:  5px;
+}
+
 #firearminterest-container select {
   width: 95%;
 }
+
+.footer-branding{
+  padding:  5px;
+  margin-bottom: 5px;
+}
+
+.footer-branding img{
+  height: 30px;
+}
+
