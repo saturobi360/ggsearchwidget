@@ -155,6 +155,11 @@ foreach($a1 as $a2) {
                 </select>
             </label>
     </div>
+    <div class="footer-branding">
+             <a href="http://gungenius.com" target="_blank" >
+  					<img src="genius-small-logo.svg" alt="" />
+  			</a>
+   </div>
     
     <div id="div-gpt-ad-1524583029226-0" class="ad-container"></div>
     
