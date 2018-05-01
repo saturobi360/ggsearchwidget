@@ -80,7 +80,7 @@ $a1 = explode(',',$file);
     <form action="https://www.gungenius.com/search?" target="_blank">
       <div class="widget">
         <div class="header">
-          <h2>CHOOSE A FIREARM</h2>
+          <h2>FIND YOUR NEXT FIREARM</h2>
           <div class="powered-by">
             <span><a href="http://gungenius.com" target="_blank" >GunGenius.com</a></span>
           </div>
