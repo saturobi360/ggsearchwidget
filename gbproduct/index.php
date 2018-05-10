@@ -168,7 +168,7 @@ foreach($a1 as $a2) {
             // define slot1
             slot1 = googletag.defineSlot(
                     "/90033693/gunbroker/search_widget",
-                    [[300, 600], [300, 250]],
+                    [300, 250],
                     "div-gpt-ad-1524583107949-0"
                 )
                 .addService(googletag.pubads())
