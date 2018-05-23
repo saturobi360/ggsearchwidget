@@ -31,6 +31,7 @@ $a1 = explode(',',$file);
         var url = document.getElementById('firearminterest').value;
         if (url != 'none') {
           window.open(url, '_blank');
+		  win.focus();
           <!--window.location = url; -->
         }
       }
