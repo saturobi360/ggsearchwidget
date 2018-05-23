@@ -30,7 +30,8 @@ $a1 = explode(',',$file);
       function goToNewPage() {
         var url = document.getElementById('firearminterest').value;
         if (url != 'none') {
-          window.location = url;
+          window.open(url, '_blank');
+          <!--window.location = url; -->
         }
       }
 
